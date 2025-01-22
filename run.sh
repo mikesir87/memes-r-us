@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run -dp 5050:5000 docker-username/my-first-python-website
+docker run -dP --platform=linux/amd64 docker-username/my-first-python-website
