@@ -21,8 +21,3 @@ When you're done, tear everything down by running:
 ```
 docker compose down
 ```
-
-### Using Dev Environments
-
-The easiest way to use the dev environment is to use [this link](https://open.docker.com/dashboard/dev-envs?url=https%3A%2F%2Fgithub.com%2Fmikesir87%2Fmemes-r-us). The **Create a Dev Environment** wizard will start. Once the environment is spun up, you can open the **Workspace** service in VS Code.
-
