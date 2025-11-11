@@ -10,24 +10,3 @@ services:
         - path: ./app
           action: sync
           target: /usr/local/app
-
-  mysql:
-    image: mysql:latest
-    volumes:
-      - ./dev/db:/docker-entrypoint-initdb.d
-      - mysql-data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: superSecret
-      MYSQL_DATABASE: memes
-
-  phpmyadmin:
-    image: phpmyadmin:latest
-    ports:
-      - 8080:80
-    environment:
-      PMA_HOST: mysql
-      PMA_USER: root
-      PMA_PASSWORD: superSecret
-
-volumes:
-  mysql-data:
