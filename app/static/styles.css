@@ -1,20 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
    
 body {
-  background-color: #f3f3f3;
+  background: linear-gradient(135deg, #667eea 0%, #f64f59 100%);
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1em 0;
 }
 
 #logo {
   height: 50px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
 #content {
   display: inline-block;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 1em #ccc;
-  padding: 1em;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 1.5em 2em;
   margin-top: 2em;
-	background-color: #f3f3f3;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+#content h1 {
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 1em;
+  font-size: 2rem;
+}
+
+#content img {
+  border-radius: 8px;
+  max-width: 100%;
 }
