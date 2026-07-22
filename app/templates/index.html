@@ -1,17 +1,132 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Meme Viewer</title>
+    <title>Memes-R-Us | Earth's Biggest World Cup Meme Store</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
   </head>
   <body>
-    <div>
+
+    <div id="topnav">
       <img src="{{ url_for('static', filename='logo.png') }}" alt="Memes R Us logo" id="logo" />
+      <div id="tagline">Earth's Biggest World Cup Meme Store&#8482;</div>
+      <div id="search-bar">
+        <input type="text" placeholder="Search 14 million World Cup memes..." />
+        <button>Go!</button>
+      </div>
     </div>
 
-    <div id="content">
-      <h1>{{ message }}</h1>
-      <img src="{{ meme_url }}" alt="Our random gif" />
+    <div id="subnav">
+      <a href="#">World Cup Memes</a> |
+      <a href="#">Classic Goals</a> |
+      <a href="#">Penalty Drama</a> |
+      <a href="#">Referee Fails</a> |
+      <a href="#">Trophy Celebrations</a> |
+      <a href="#">Today's Deals</a>
     </div>
+
+    <div id="main">
+
+      <div id="sidebar">
+        <h3>Browse by Nation</h3>
+        <ul>
+          <li><a href="#">&#127463;&#127479; Brazil (5x Champions)</a></li>
+          <li><a href="#">&#127465;&#127466; Germany (4x Champions)</a></li>
+          <li><a href="#">&#127462;&#127479; Argentina (3x Champions)</a></li>
+          <li><a href="#">&#127467;&#127479; France (2x Champions)</a></li>
+          <li><a href="#">&#127470;&#127481; Italy (4x Champions)</a></li>
+          <li><a href="#">&#127466;&#127480; Spain (1x Champions)</a></li>
+          <li><a href="#">&#127468;&#127463; England (Still Waiting)</a></li>
+          <li><a href="#">&#127477;&#127481; Portugal (Almost)</a></li>
+        </ul>
+
+        <hr />
+
+        <h3>Today's Top Deals</h3>
+        <p>&#11088; Save 100% on all<br />premium World Cup memes!<br /><small>(They were always free)</small></p>
+
+        <hr />
+
+        <h3>Customers Also Viewed</h3>
+        <ul>
+          <li><a href="#">Zidane Headbutt GIF</a></li>
+          <li><a href="#">The Hand of God</a></li>
+          <li><a href="#">Messi Trophy Kissing</a></li>
+          <li><a href="#">Crying Ronaldo Pack</a></li>
+          <li><a href="#">1994 Brazil Screaming</a></li>
+        </ul>
+
+        <hr />
+
+        <h3>Gift Ideas</h3>
+        <ul>
+          <li><a href="#">Meme Gift Cards</a></li>
+          <li><a href="#">Meme Subscriptions</a></li>
+          <li><a href="#">Meme Wish List</a></li>
+        </ul>
+      </div>
+
+      <div id="content">
+        <div id="welcome-bar">
+          Hello, Football Fan! &nbsp;|&nbsp; <a href="#">Sign In</a> &nbsp;|&nbsp;
+          <a href="#">Your Meme Cart</a> &nbsp;|&nbsp; <a href="#">Your Account</a>
+        </div>
+
+        <h1>&#9917; Today's Featured World Cup Meme</h1>
+
+        <div class="product-listing">
+          <div class="product-image">
+            <img src="{{ meme.url }}" alt="{{ meme.title }}" />
+            <div class="image-caption">Click image to zoom (doesn't actually work)</div>
+          </div>
+
+          <div class="product-details">
+            <h2>{{ meme.title }}</h2>
+
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="reviews"><a href="#">{{ meme.reviews }} customer reviews</a></div>
+            <hr />
+
+            <div class="price">
+              Price: <strong>$0.00</strong>
+              <span class="old-price">List Price: $149.99</span>
+            </div>
+            <div class="savings">You Save: $149.99 (100%)</div>
+
+            <div class="availability">&#9989; In Stock. Unlimited quantity remaining.</div>
+            <div class="shipping">&#128230; FREE Super Saver Meme Delivery on orders over $0.00</div>
+
+            <div class="sold-by">Sold by: <a href="#">Memes-R-Us Inc.</a> and fulfilled by the Internet</div>
+
+            <hr />
+
+            <button class="add-to-cart">Add to Meme Cart</button>
+            <button class="buy-now">Buy Now with 1-Click&#174;<br /><small>(still free tho)</small></button>
+
+            <div class="gift-wrap">
+              <input type="checkbox" id="giftwrap" /> <label for="giftwrap">Gift-wrap available</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="promo-banner">
+          &#128293; <strong>NEW!</strong> Sign up for Memes Prime&#8482; and get unlimited World Cup memes, free two-second delivery, and early access to upcoming tournament disasters &mdash;
+          <a href="#">Try Memes Prime FREE for 30 days</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <div id="footer-links">
+        <a href="#">Conditions of Use</a> |
+        <a href="#">Privacy Notice</a> |
+        <a href="#">Help</a> |
+        <a href="#">Careers</a> |
+        <a href="#">Investor Relations</a>
+      </div>
+      <p>&copy; 1994&ndash;2026 Memes-R-Us, Inc. All rights reserved. All memes are certified Grade-A World Cup content.</p>
+      <p><em>*Memes-R-Us is not affiliated with FIFA, any national football associations, or Jeff Bezos (probably)</em></p>
+    </div>
+
   </body>
 </html>
