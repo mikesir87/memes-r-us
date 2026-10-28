@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-   
+
 body {
-  background-color: #f3f3f3;
+  background: linear-gradient(135deg, #ff6ec7, #7873f5 50%, #4adede);
+  background-attachment: fixed;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
@@ -10,11 +11,16 @@ body {
   height: 50px;
 }
 
+h1 {
+  color: #ff3d81;
+}
+
 #content {
   display: inline-block;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 1em #ccc;
+  border: 3px solid #ffe600;
+  border-radius: 12px;
+  box-shadow: 0 0 1.5em #4b1d8f;
   padding: 1em;
   margin-top: 2em;
-	background-color: #f3f3f3;
+  background-color: #fffbe6;
 }
