@@ -1,17 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Meme Viewer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memes R Us - The Great British Meme-Off</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
   </head>
   <body>
-    <div>
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="Memes R Us logo" id="logo" />
-    </div>
+    <!-- Great British Baking Show: bunting across the top of the tent -->
+    <ul class="bunting" aria-hidden="true">
+      {% for i in range(16) %}<li></li>{% endfor %}
+    </ul>
 
-    <div id="content">
-      <h1>{{ message }}</h1>
-      <img src="{{ meme_url }}" alt="Our random gif" />
-    </div>
+    <!-- College basketball + World Series: the big scoreboard (Hell's Kitchen teams) -->
+    <header class="scoreboard">
+      <div class="team team-red">
+        <span class="team-name">Red Brigade</span>
+        <span class="score">7</span>
+      </div>
+      <div class="logo-pill">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Memes R Us logo" id="logo" />
+        <span class="inning">Game 7 &bull; Final Four</span>
+      </div>
+      <div class="team team-blue">
+        <span class="team-name">Blue Brigade</span>
+        <span class="score">7</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Gingham tablecloth border, baseball-stitch ticket inside -->
+      <div id="content" class="ticket">
+        <div class="ticket-inner">
+          <p class="admit">Admit One &bull; Live on Tour</p>
+          <p class="eyebrow">Tonight's Showstopper Challenge</p>
+
+          <h1>{{ message }}</h1>
+
+          <div class="frame">
+            <img src="{{ meme_url }}" alt="Our random gif" />
+            <span class="rosette">Star<br />Baker</span>
+          </div>
+
+          <p class="verdict">
+            &ldquo;Yes, Chef! A proper bake, a walk-off homer and a standing
+            ovation. Encore!&rdquo;
+          </p>
+          <p class="verdict-by">&mdash; The Judges (and the Crowd)</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Rockstars: the encore ticker -->
+    <footer class="ticker" aria-hidden="true">
+      <span>
+        Yes, Chef! &#9733; It's RAW! &#9733; Cut down the nets &#9733; Home run
+        &#9733; Showstopper! &#9733; One more song! &#9733; Bake it till you
+        make it &#9733; Down goes the champ &#9733; Encore! &#9733;
+      </span>
+    </footer>
   </body>
 </html>
